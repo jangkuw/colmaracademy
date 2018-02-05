@@ -206,7 +206,7 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 960px) {
   .banner {
     height: 15rem;
   }
