@@ -431,7 +431,7 @@ footer {
 
 
 /* MEDIA Queries */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
   .header-small-screen {
     display: flex;
   }
