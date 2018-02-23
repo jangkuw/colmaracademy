@@ -1,248 +1,489 @@
 /* UNIVERSAL Styles */
-  html, body {
-  font-family: Helvetica, sans-serif;
-  font-size: 18px;
+html, body {
   margin: 0;
+  padding: 0;
+  font-family: "Italianno", serif;
+  font-size: 16px;
+  color: black;
   background-color: white;
+}
+
+header, footer {
+  padding: 1rem 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c6a957;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  /*border: 2px solid green;*/
+  display: block;
+  padding: 2rem 1.5rem;
 }
 
-h2 {
-  font-size: 1rem;
+.main-container {
+  top: 4rem;
+  position: relative;
 }
 
-h1 {
-  font-size: 2rem;
-}
 
 /* HEADER Section */
-.header-bar {
+header {
+  position: fixed;
   width: 100%;
-  height: auto;
-  background-color: black;
+  z-index: 2;
 }
 
-.header {
-  /*border: 1px solid yellow;*/
+.header-big-screen, .header-small-screen {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c6a957;
+}
+
+.header-small-screen {
+  display: none;
+}
+
+.header-big-screen {
+  display: flex;
+}
+
+.logo {
   display: flex;
   align-items: center;
-  padding: 0.66rem 0;
-  background-color: black;
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 3rem;
+  height: auto;
+}
+.logo #colmar {
+  font-family: "IM Fell English SC";
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.logo #academy {
+  font-family: "Italianno";
+  color: #158785;
+  font-weight: 500;
+  font-size: 3.9rem;
+  line-height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.header-big-screen nav, .header-small-screen nav {
+  margin-right: 1.5rem;
+  padding-right: 1.5rem;
+  width: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.header-big-screen nav {
+  margin-right: 1.5rem;
+  padding-right: 1.5rem;
+  width: 38%;
+}
+
+.header-small-screen nav {
+  width: 100%;
+}
+
+.header-big-screen .menu, .header-small-screen .menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-big-screen .menu {
+  justify-content: space-between;
+}
+
+.header-small-screen .menu {
+  justify-content: space-around;
+}
+
+.header-big-screen nav li, .header-small-screen nav li {
+  display: inline-block;
+  background-color: #158785;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.6rem 0;
+}
+
+.header-big-screen nav li {
+  width: 9rem;
+  height: 0.8rem;
+  border-radius: 1rem;
+}
+
+.header-small-screen nav li {
+  width: 2.5rem;
+  height: 1.2rem;
+  border-radius: 1.5rem;
+}
+
+.header-big-screen nav li:hover, .header-small-screen nav li:hover {
+  background-color: #0c605f;
+}
+
+.header-big-screen nav li:active, .header-small-screen nav li:active, .banner-text .btn:active, #social-media li:active, #document li:active {
+  box-shadow: -3px 8px 6px 0 rgba(0,0,0,.47);
+}
+
+.header-big-screen nav a {
+  text-decoration: none;
+  font-family: "IM Fell English SC";
   color: white;
-}
-
-.header img {
-  height: 1.5rem;
-  margin-left: 0.5rem;
-}
-
-.header span {
   font-size: 1rem;
-  margin-left: 1rem;
+  font-weight: 200;
 }
+
 
 /* BANNER Section */
 .banner {
-  /*border: 2px solid red;*/
-  background-image: url("../images/moto.jpeg");
+  height: auto;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.9)
+  ), url(../images/banner.jpg);
   background-size: cover;
-  background-position: center;
-  height: 25rem;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.announcement {
-  /*border: 2px solid darkblue;*/
-  padding-top: 9rem;
-}
-
-#text-announce {
+.banner-text {
+  width: 50%;
+  height: 40%;
+  margin-top: 20rem;
+  color: #0b4354;
   font-weight: bold;
-  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-text h1, .banner-text h2 {
+  width: 100%;
+  display: block;
+  padding-bottom: 1.5rem;
+}
+
+.banner-text h1 {
+  font-size: 6rem;
+  line-height: 4rem;
+}
+
+.banner-text h2 {
+  font-size: 2rem;
+  line-height: 1.5rem;
+}
+
+.banner-text .btn {
+  background-color: #842b0a;
+  width: 40%;
+  padding: 0.75rem 0;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 1500ms ease-in 0ms;
+  transition: box-shadow 50ms ease-in 0ms;
+}
+
+.banner-text .btn:hover {
+  width: 40.5%;
+  background-color: #471705;
+}
+
+.banner-text a {
+  text-decoration: none;
+  font-family: "IM Fell English SC";
   color: white;
-  padding: 2rem 3rem;
-  width: 20rem;
-}
-
-#text-announce h2 {
-  margin-bottom: 0.25rem;
+  font-size: 1.8rem;
+  font-weight: 200;
 }
 
 
-/*MENU Section */
-.menu-bar {
+/* INFORMATION and EXHIBIT Sections */
+.informations, .courses, .exhibits {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}
+
+.main-info, .main-exhibit {
+  width: 60%;
+  padding-right: 1.5rem;
+}
+
+.main-info img, .main-exhibit video {
   width: 100%;
   height: auto;
-  background-color: firebrick;
 }
 
-.menu {
-  /*border: 1px solid blue;*/
+.main-info h2, .main-exhibit h2 {
+  font-family: "IM Fell English SC";
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.main-info p, .main-info h3, .main-exhibit p {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.3rem;
+}
+
+.main-info h3 {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.sub-infos, .sub-exhibits {
   display: flex;
-  justify-content: space-between;
-  height: 2.5rem;
+  flex-direction: column;
+  width: 40%;
+  margin-top: -1rem;
+  font-family: "IM Fell English SC";
 }
 
-.menu a {
-  text-decoration: none;
-  color: white;
-  padding: 0.75rem 0;
-}
-
-.mobile-menu {
-  display: none;
-  height: 2.5rem;
-  justify-content: center;
-}
-
-.mobile-menu a {
-  text-decoration: none;
-  color: white;
-  padding: 0.75rem 0;
-}
-
-
-/* PRODUCT Section */
-.products {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  /*overflow-x: hidden;*/
-}
-
-.product {
-  border: 4px solid black;
-  width: 30%;
-  display: block;
-}
-
-.product-img {
-  /*border: 1px solid red;*/
-  height: 9em;
-  padding: 12%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-img img {
-  width: 100%;
-  height: 9em;
-  display: block;
-}
-
-.product span {
-  text-align: center;
-  background-color: black;
-  color: white;
-  width: 100%;
-  display: block;
-  padding: 0.5rem 0;
-}
-
-
-/* INFO Section */
-.info {
-  margin-top: 3rem;
+.sub-info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  transition: box-shadow 200ms ease-in 0ms;
 }
 
-.location, .hours {
-  /*border: 1px solid red;*/
+.sub-info:hover {
+  background-color: lightgray;
+  border-radius: 1rem;
+  box-shadow: -3px 8px 6px 0 rgba(0,0,0,.47)
+}
+
+.sub-info #img-big-screen {
+  display: flex;
   width: 35%;
+  height: auto;
+  padding: 1rem;
 }
 
-.caption {
-  text-align: left;
-  background-color: black;
-  color: white;
-  padding: 1rem 2rem;
-  display: block;
+.sub-info #img-small-screen {
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
 }
 
-.value {
-  text-align: left;
+.sub-info-text {
+  width: 65%;
+}
+
+.sub-info-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.sub-info-text p {
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0.5rem 1rem;
+}
+
+.sub-info-text a {
+  color: #158785;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 0.5rem 1rem;
+}
+
+/* COURSES Section */
+#courses-background {
+  background-color: lightgray;
+}
+
+.subjects h1 {
+  font-family: "Italianno";
+  color: #158785;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 2rem;
+  padding-left: 2rem 0;
+  text-align: center;
+}
+
+.courses {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 4.5rem 2rem 4.5rem;
+  font-family: "IM Fell English SC";
+}
+
+.course-detail {
+  width: 30%;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.course-title {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.course-detail img {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  transition: width 500ms ease-in 0ms;
+}
+
+.course-detail img:hover {
+  width: 120%;
+}
+
+.course-detail h3, .course-detail p {
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 0.5rem 1rem;
+}
+
+
+/* EXHIBIT Section */
+#exhibit-background {
   background-color: white;
-  color: black;
-  padding: 0;
-  display: block;
+}
+
+.exhibits {
+  padding-top: 1rem;
 }
 
 
 /* FOOTER Section */
-.footer-bar {
-  width: 100%;
-  height: auto;
-  background-color: black;
+footer {
+  top: 4rem;
+  position: relative;
 }
 
-.footer {
-  /*border: 1px solid yellow;*/
-  background-color: black;
-  color: white;
+#copyright {
+  font-size: 1.8rem;
+  font-weight: 400;
+  width: 35%;
+}
+
+#social-media, #document {
+  display: flex;
+  justify-content: space-between;
+}
+
+#social-media {
+  width: 25%;
+}
+
+#document {
+  width: 15%;
+}
+
+#social-media span {
+  width: 50rem;
+  font-size: 1.8rem;
+  padding: 0.75rem 0;
+}
+
+#social-media li, #document li {
+    /*border: 1px solid green;*/
+  width: 100%;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
-  height: 5rem;
-  margin-top: 4rem;
+  vertical-align: middle;
+  justify-content: center;
+  padding: 0.25rem 0;
+  border-radius: 2rem;
+  transition: box-shadow 50ms ease-in 0ms;
 }
 
-/* MEDIA Queries Section */
-@media only screen and (max-width: 1024px) {
-  .menu {
-    display: none;
-  }
-  .mobile-menu {
+#social-media li:hover, #document li:hover {
+  background-color: #87723a;
+}
+
+#social-media a, #document a {
+  display: inline-block;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+
+/* MEDIA Queries */
+@media only screen and (max-width: 840px) {
+  .header-small-screen {
     display: flex;
   }
-}
 
-@media only screen and (max-width: 470px) {
-  .banner {
-    height: 15rem;
+  .header-big-screen, .main-info, .main-exhibit h2, .main-exhibit p, .course-detail img, .course-detail h3, .course-detail p, .sub-exhibits, #social-media span, #document {
+    display: none;
   }
 
-  .announcement {
-    padding-top: 10rem;
-  }
-
-  #text-announce {
+  .banner-text, .banner-text h1, .banner-text h2, .course-detail, .main-exhibit {
     width: 100%;
-    padding: 1rem 2rem;
+    padding-right: 0;
   }
 
-  #text-announce h2 {
-    font-size: 0.77rem;
+  .sub-info, .courses {
+      flex-direction: column;
+    }
+
+  .sub-infos, .sub-info img, .sub-info-text {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
   }
 
-  #text-announce h1 {
-    font-size: 1rem;
+  .sub-info #img-big-screen {
+    display: none;
   }
 
-  .products, .info {
-    width: 90%;
-    flex-direction: column;
+  .sub-info #img-small-screen {
+    display: flex;
+  }
+
+  #courses-background, #exhibit-background {
+    background: linear-gradient(#dbdad6, white);
+  }
+
+  .course-detail {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    transition: box-shadow 200ms ease-in 0ms;
   }
-  .product {
-    width: 100%;
-    margin-bottom: 1rem;
+
+  .course-detail:hover {
+    background-color: lightgray;
+    border-radius: 1rem;
+    box-shadow: -3px 8px 6px 0 rgba(0,0,0,.47)
   }
-  .location, .hours {
-    width: 100%;
-    margin-bottom: 0.5rem;
+
+  #copyright {
+    width: 60%;
+    font-size: 1.5rem;
+    font-weight: 200;
   }
-  .footer {
-    justify-content: center;
-  }
+
 }
